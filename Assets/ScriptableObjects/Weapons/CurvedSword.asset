@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb4a570c40f2df4ba7443e31bf0b06e, type: 3}
+  m_Name: CurvedSword
+  m_EditorClassIdentifier: 
+  WeaponName: CurvedSword
+  MovementSpeedModifier: 1.5
+  AttackRange: 2
+  HitDelay: 0.4
+  AttackAnimationSpeed: 3
+  Damage: 12
+  Icon: {fileID: 21300000, guid: ec9b5dfc2361a144f97dc0faf994eec5, type: 3}
+  Prefab:
+    m_AssetGUID: 4d0814cafad460246890ec829fa7071d
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
