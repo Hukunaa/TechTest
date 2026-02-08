@@ -10,7 +10,7 @@ Hello! First of all, thank you very much for taking the time to review my techni
 
 ## How I approached this test (development phases)
 
-### Phase 1 — Reference study (≈ 30 minutes)
+### Phase 1 | Reference study (≈ 30 minutes)
 I started by studying **Archero** for around **30 minutes**, focusing on:
 - how the character interacts with the environment
 - how movement feels and responds to joystick input
@@ -18,14 +18,14 @@ I started by studying **Archero** for around **30 minutes**, focusing on:
 
 One key observation is that **Archero feels very snappy**. Movement is essentially *binary* (no gradual acceleration/deceleration): the joystick direction is normalized, resulting in **constant movement speed**, whether the finger is near the joystick center or at the edge.
 
-### Phase 2 — Core foundation: game loop + movement (≈ 1 hour)
+### Phase 2 | Core foundation: game loop + movement (≈ 1 hour)
 With that reference in mind, I first created a simple **GameManager** for state control and observation (Idle / Running / Pause / RoundComplete / Dead).
 
 Then I implemented the **Hero controller**, aiming to replicate Archero’s movement feel as closely as possible. Once movement was working, I added environment bounds so the player had a readable play area. I also recreated:
 - the dual-color floor grid
 - a simple toon-ish decor style
 
-### Phase 3 — Combat design: weapons + conditions + animation integration (largest time block)
+### Phase 3 | Combat design: weapons + conditions + animation integration (largest time block)
 After movement and the environment were in place, I designed the combat system. My initial plan was to implement only what was explicitly requested and add extras afterward, but I noticed that the instructions didn’t mention enemies attacking.
 
 I felt the prototype would be less satisfying if enemies were only “punching bags,” so I decided to support **enemy attacks** to create a more complete combat loop.
@@ -36,13 +36,13 @@ I then implemented the **hero weapon system**, which was one of the most time-co
 - animation timing matching weapon hit timing
 - keeping the system modular and easy to tweak
 
-### Phase 4 — Shared animation controller (quick iteration)
+### Phase 4 | Shared animation controller (quick iteration)
 To keep animation logic simple and consistent, I created an **AnimatorController** script that drives transitions via crossfades. Since the hero and enemies share similar animation setups, the same script is used on both.
 
-### Phase 5 — UI weapon selection (quick iteration)
+### Phase 5 | UI weapon selection (quick iteration)
 I added a basic weapon selection UI under the joystick to switch between the **three weapons** included in the prototype. This was straightforward: minimal UI wiring + calling the weapon switch methods.
 
-### Phase 6 — Enemy controller + level loop (moderate)
+### Phase 6 | Enemy controller + level loop (moderate)
 I implemented the enemy controller using the same base class as the hero: **LivingUnit**, which provides shared “living entity” behavior such as:
 - health and death conditions
 - shared stats (speed/max speed)
@@ -68,7 +68,7 @@ This is an approximate breakdown:
 - **Game feel / polish (camera follow, shakes, particles, trails, death feedback, health bars):** ~2h–3h  
 - **Addressables integration + refactors / cleanup:** ~1h–2h  
 
-Overall, I overshot the **10-hour** guideline by **a few hours**. The main reason is that I wanted the prototype to have a minimum of *game feel* and not just “systems that work.”
+Overall, I overshot the **10-hour** guideline by **a few hours**. The main reason is that I wanted the prototype to have a decent amount of *game feel* and not just “systems that work.”
 
 ---
 
