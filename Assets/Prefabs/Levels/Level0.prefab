@@ -1952,7 +1952,7 @@ MonoBehaviour:
   _numberOfEnemiesToSpawn: 5
   _minSpawnX: -5
   _maxSpawnX: 5
-  _minSpawnY: 6
+  _minSpawnY: 7
   _maxSpawnY: 14
 --- !u!1 &6450963536355364023
 GameObject:
