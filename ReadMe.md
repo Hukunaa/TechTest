@@ -31,9 +31,10 @@ After movement and the environment were in place, I designed the combat system. 
 I felt the prototype would be less satisfying if enemies were only “punching bags,” so I decided to support **enemy attacks** to create a more complete combat loop.
 
 I then implemented the **hero weapon system**, which was one of the most time-consuming parts of the test. The main goals were:
-- attacking only under the correct conditions (not moving, enemy in range)
+- attacking only under the correct conditions (not moving, enemy in range of the weapon the Hero is holding)
 - weapon switching and selection
 - animation timing matching weapon hit timing
+- weapon affects the character's movement speed
 - keeping the system modular and easy to tweak
 
 ### Phase 4 | Shared animation controller (quick iteration)
